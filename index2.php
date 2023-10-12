@@ -1,56 +1,56 @@
 <?php
-//сумма
-function getSum($num1,$num2){
-    $suma=$num1+$num2;
-    return $suma;
-}
-echo getSum(5,5).'<br>';
 
-//вычитание
-function getMin($num3,$num4){
-    $minus=$num3-$num4;
-    return $minus;
-}
-echo getMin(10,5).'<br>';
+//1. Объеденить элементы массива в строку
 
-//умножение
-function getUmn($num5,$num6){
-    $umn=$num5*$num6;
-    return $umn;
-}
-echo getUmn(10,3).'<br>';
+$a=[1,2,3,4,5,6];
+$b= join($a);
+echo $b.'<br>';
 
-//деление
-function getDel($num7,$num8){
-    $del=$num7/$num8;
-    return $del;
-}
-echo getDel(6,3).'<br>';
+//2. Замена символов с отсутствием регистрозависимости
 
-//2
+$str='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.';
 
-function getPrin($num){
-    $num9=$num+$num;
-    $num9=$num9*2;
-    $num9=$num9/4;
-    return $num9;
-}
-echo getPrin(2).'<br>';
+echo str_ireplace('a','+',$str).'<br>';
 
-//3
+//1. функция explode() разбивает строку
 
-function getPriv($imya){
-    $time=13;
-    if($time>=17 && $time<=21){
-        echo "Добрый вечер $imya";
-        }
-        elseif($time>=22 && $time<=6){
-        echo "Доброй ночи $imya";
-        }
-        else{
-        echo "Добрый день $imya";
-    }
-}
-echo getPriv('Никита');
+$slova='1slovo 2slovo 3slovo';
+$slova1=explode(' ',$slova);
+echo $slova1[0].'<br>';
+echo $slova1[2].'<br>';
 
+//2. функция str_split() преобразует строку в массив
+
+$hello='Hello world';
+
+$arr1=str_split($hello);
+
+echo('<pre>');
+print_r($arr1).'<br>';
+echo('<pre>');
+
+//3. strlen возвращает длину строки
+
+echo strlen($hello).'<br>';
+
+//4.Возвращает строку, начиная с найденного символа
+
+echo strpbrk($hello,'e').'<br>';
+
+//5. print выводит строку
+
+print "привет".'<br>';
+
+//6. wordwrap() переносит строку по  указанному количеству символов
+
+$a1=wordwrap($hello,4,'<br>');
+echo $a1;
+
+//7.
+
+//8.
+
+//9.
+
+//10.
 ?>
